@@ -3,8 +3,8 @@ module scenes {
     {
            //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _dolphinSceneImage: createjs.Bitmap;
-        private goForwardButton: objects.Button;
-        private enjoyButton: objects.Button;
+        private _playButton: objects.Button;
+        private _goDeeperButton: objects.Button;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -19,25 +19,25 @@ module scenes {
             this._dolphinSceneImage = new createjs.Bitmap("../../Assets/images/DolphinScene.png");
             this.addChild(this._dolphinSceneImage);
 
-            // add the Go Forward button to the scene
-            this.goForwardButton = new objects.Button(
-                "GoforwardButton",
+            // add the button to the scene
+            this._playButton = new objects.Button(
+                "PlayButton",
                 config.Screen.CENTER_X-150,
                 config.Screen.CENTER_Y + 140);
-            this.addChild(this.goForwardButton);
+            this.addChild(this._playButton);
            
             // Go Forward Button event listener
-            this.goForwardButton.on("click", this.goForwardButtonClick, this);
+            this._playButton.on("click", this._playButtonClick, this);
             
-            // add the Enjoy button to the scene
-            this.enjoyButton = new objects.Button(
-                "EnjoyButton",
+            // add the button to the scene
+            this._goDeeperButton = new objects.Button(
+                "GoDeeperButton",
                 config.Screen.CENTER_X+150,
                 config.Screen.CENTER_Y + 140);
-            this.addChild(this.enjoyButton);
+            this.addChild(this._goDeeperButton);
            
-            // Enjoy Button event listener
-            this.enjoyButton.on("click", this.enjoyButtonClick, this);
+            // Button event listener
+            this._goDeeperButton.on("click", this._godeeperButtonClick, this);
 
 
             // add this scene to the global stage container
@@ -53,14 +53,14 @@ module scenes {
         //EVENT HANDLERS ++++++++++++++++++++
         
         //  Button click event handler
-        private goForwardButtonClick(event: createjs.MouseEvent) {
-            // Switch to the SHIPWRECK Scene
+        private _playButtonClick(event: createjs.MouseEvent) {
+            // Switch  the  Scene
             scene = config.Scene.SHIPWRECK_SCENE;
             changeScene();
         }
         
         // Button click event handler
-        private enjoyButtonClick(event: createjs.MouseEvent) {
+        private _godeeperButtonClick(event: createjs.MouseEvent) {
             // Switch to the SEATURTLE Scene
             scene = config.Scene.SEATURTLE_SCENE;
             changeScene();

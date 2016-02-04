@@ -2,8 +2,8 @@ module scenes {
     export class SeaTurtleScene extends objects.Scene {
          //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _seaTurtleSceneImage: createjs.Bitmap;
-        private _swimLeftButton: objects.Button;
-        private _swimRightButton: objects.Button;
+        private _followTurtleButton: objects.Button;
+        private _goOppositeButton: objects.Button;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -18,25 +18,25 @@ module scenes {
             this._seaTurtleSceneImage = new createjs.Bitmap("../../Assets/images/SeaTurtleScene.png");
             this.addChild(this._seaTurtleSceneImage);
             
-            // add the CORALLINE_SCENE button to the MENU scene
-            this._swimLeftButton = new objects.Button(
-                "SwimLeftButton",
+            // add the CORALLINE_SCENE button to the scene
+            this._followTurtleButton = new objects.Button(
+                "FollowTurtleButton",
                 config.Screen.CENTER_X - 150,
                 config.Screen.CENTER_Y + 140);
-            this.addChild(this._swimLeftButton);
+            this.addChild(this._followTurtleButton);
             
             // CORALLINE_SCENE Button event listener
-            this._swimLeftButton.on("click", this._swimLeftButtonClick, this);
+            this._followTurtleButton.on("click", this._followTurtleButtonClick, this);
             
-            // add the CORALLINE_SCENE button to the MENU scene
-            this._swimRightButton = new objects.Button(
-                "SwimRightButton",
+            // add the CORALLINE_SCENE button to the scene
+            this._goOppositeButton = new objects.Button(
+                "GoOppositeButton",
                 config.Screen.CENTER_X + 150,
                 config.Screen.CENTER_Y + 140);
-            this.addChild(this._swimRightButton);
+            this.addChild(this._goOppositeButton);
             
             // CORALLINE_SCENE Button event listener
-            this._swimRightButton.on("click", this._swimRightButtonClick, this);
+            this._goOppositeButton.on("click", this._goOppositeButtonClick, this);
             
             // add this scene to the global stage container
             stage.addChild(this);
@@ -51,14 +51,14 @@ module scenes {
         //EVENT HANDLERS ++++++++++++++++++++
         
         //  Button click event handler
-        private _swimLeftButtonClick(event: createjs.MouseEvent) {
+        private _followTurtleButtonClick(event: createjs.MouseEvent) {
             // Switch to the CORALLINE_SCENE Scene
             scene = config.Scene.CORALLINE_SCENE;
             changeScene();
         }
         
         // CORALLINE_SCENE Button click event handler
-        private _swimRightButtonClick(event: createjs.MouseEvent) {
+        private _goOppositeButtonClick(event: createjs.MouseEvent) {
             // Switch to the CORALLINE_SCENE Scene
             scene = config.Scene.FISH_SCENE;
             changeScene();

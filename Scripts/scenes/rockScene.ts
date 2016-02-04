@@ -2,8 +2,8 @@ module scenes {
     export class RockScene extends objects.Scene {
           //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _rockSceneImage: createjs.Bitmap;
-        private goForwardButton: objects.Button;
-        private enjoyButton: objects.Button;
+        private _detourButton: objects.Button;
+        private _goThroughButton: objects.Button;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -18,25 +18,25 @@ module scenes {
             this._rockSceneImage = new createjs.Bitmap("../../Assets/images/RockScene.png");
             this.addChild(this._rockSceneImage);
 
-            // add the Go Forward button to the scene
-            this.goForwardButton = new objects.Button(
-                "GoforwardButton",
+            // add the button to the scene
+            this._detourButton = new objects.Button(
+                "DetourButton",
                 config.Screen.CENTER_X-150,
                 config.Screen.CENTER_Y + 140);
-            this.addChild(this.goForwardButton);
+            this.addChild(this._detourButton);
            
-            // Go Forward Button event listener
-            this.goForwardButton.on("click", this.goForwardButtonClick, this);
+            // Button event listener
+            this._detourButton.on("click", this._detourButtonClick, this);
             
-            // add the Enjoy button to the scene
-            this.enjoyButton = new objects.Button(
-                "EnjoyButton",
+            // add button to the scene
+            this._goThroughButton = new objects.Button(
+                "GoThroughButton",
                 config.Screen.CENTER_X+150,
                 config.Screen.CENTER_Y + 140);
-            this.addChild(this.enjoyButton);
+            this.addChild(this._goThroughButton);
            
-            // Enjoy Button event listener
-            this.enjoyButton.on("click", this.enjoyButtonClick, this);
+            //  Button event listener
+            this._goThroughButton.on("click", this._goThroughButtonClick, this);
 
 
             // add this scene to the global stage container
@@ -52,14 +52,14 @@ module scenes {
         //EVENT HANDLERS ++++++++++++++++++++
         
         //  Button click event handler
-        private goForwardButtonClick(event: createjs.MouseEvent) {
+        private _detourButtonClick(event: createjs.MouseEvent) {
             // Switch to the SHIPWRECK Scene
             scene = config.Scene.SHIPWRECK_SCENE;
             changeScene();
         }
         
         // Button click event handler
-        private enjoyButtonClick(event: createjs.MouseEvent) {
+        private _goThroughButtonClick(event: createjs.MouseEvent) {
             // Switch to the SEATURTLE Scene
             scene = config.Scene.SEATURTLE_SCENE;
             changeScene();

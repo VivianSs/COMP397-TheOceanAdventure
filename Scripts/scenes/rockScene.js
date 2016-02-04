@@ -17,16 +17,16 @@ var scenes;
             // add  Image
             this._rockSceneImage = new createjs.Bitmap("../../Assets/images/RockScene.png");
             this.addChild(this._rockSceneImage);
-            // add the Go Forward button to the scene
-            this.goForwardButton = new objects.Button("GoforwardButton", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 140);
-            this.addChild(this.goForwardButton);
-            // Go Forward Button event listener
-            this.goForwardButton.on("click", this.goForwardButtonClick, this);
-            // add the Enjoy button to the scene
-            this.enjoyButton = new objects.Button("EnjoyButton", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 140);
-            this.addChild(this.enjoyButton);
-            // Enjoy Button event listener
-            this.enjoyButton.on("click", this.enjoyButtonClick, this);
+            // add the button to the scene
+            this._detourButton = new objects.Button("DetourButton", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 140);
+            this.addChild(this._detourButton);
+            // Button event listener
+            this._detourButton.on("click", this._detourButtonClick, this);
+            // add button to the scene
+            this._goThroughButton = new objects.Button("GoThroughButton", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 140);
+            this.addChild(this._goThroughButton);
+            //  Button event listener
+            this._goThroughButton.on("click", this._goThroughButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };
@@ -35,13 +35,13 @@ var scenes;
         };
         //EVENT HANDLERS ++++++++++++++++++++
         //  Button click event handler
-        RockScene.prototype.goForwardButtonClick = function (event) {
+        RockScene.prototype._detourButtonClick = function (event) {
             // Switch to the SHIPWRECK Scene
             scene = config.Scene.SHIPWRECK_SCENE;
             changeScene();
         };
         // Button click event handler
-        RockScene.prototype.enjoyButtonClick = function (event) {
+        RockScene.prototype._goThroughButtonClick = function (event) {
             // Switch to the SEATURTLE Scene
             scene = config.Scene.SEATURTLE_SCENE;
             changeScene();

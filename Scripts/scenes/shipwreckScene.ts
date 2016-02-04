@@ -2,8 +2,8 @@ module scenes {
     export class ShipwreckScene extends objects.Scene{
          //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _shipwreckSceneImage: createjs.Bitmap;
-        private _swimLeftButton: objects.Button;
-        private _swimRightButton: objects.Button;
+        private _goAwayButton: objects.Button;
+        private _enterHatchButton: objects.Button;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -18,25 +18,25 @@ module scenes {
             this._shipwreckSceneImage = new createjs.Bitmap("../../Assets/images/ShipwreckScene.png");
             this.addChild(this._shipwreckSceneImage);
             
-            // add the CORALLINE_SCENE button to the MENU scene
-            this._swimLeftButton = new objects.Button(
-                "SwimLeftButton",
+            // add the Go Away button to the scene
+            this._goAwayButton = new objects.Button(
+                "GoAwayButton",
                 config.Screen.CENTER_X - 150,
                 config.Screen.CENTER_Y + 140);
-            this.addChild(this._swimLeftButton);
+            this.addChild(this._goAwayButton);
             
             // CORALLINE_SCENE Button event listener
-            this._swimLeftButton.on("click", this._swimLeftButtonClick, this);
+            this._goAwayButton.on("click", this._goAwayButtonClick, this);
             
-            // add the CORALLINE_SCENE button to the MENU scene
-            this._swimRightButton = new objects.Button(
-                "SwimRightButton",
+            // add the Enter Hatch button to the scene
+            this._enterHatchButton = new objects.Button(
+                "EnterHatchButton",
                 config.Screen.CENTER_X + 150,
                 config.Screen.CENTER_Y + 140);
-            this.addChild(this._swimRightButton);
+            this.addChild(this._enterHatchButton);
             
             // CORALLINE_SCENE Button event listener
-            this._swimRightButton.on("click", this._swimRightButtonClick, this);
+            this._enterHatchButton.on("click", this._enterHatchButtonClick, this);
             
             // add this scene to the global stage container
             stage.addChild(this);
@@ -51,14 +51,14 @@ module scenes {
         //EVENT HANDLERS ++++++++++++++++++++
         
         //  Button click event handler
-        private _swimLeftButtonClick(event: createjs.MouseEvent) {
+        private _goAwayButtonClick(event: createjs.MouseEvent) {
             // Switch to the CORALLINE_SCENE Scene
             scene = config.Scene.CORALLINE_SCENE;
             changeScene();
         }
         
         // CORALLINE_SCENE Button click event handler
-        private _swimRightButtonClick(event: createjs.MouseEvent) {
+        private _enterHatchButtonClick(event: createjs.MouseEvent) {
             // Switch to the CORALLINE_SCENE Scene
             scene = config.Scene.FISH_SCENE;
             changeScene();

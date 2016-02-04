@@ -17,16 +17,16 @@ var scenes;
             // add  Image
             this._dolphinSceneImage = new createjs.Bitmap("../../Assets/images/DolphinScene.png");
             this.addChild(this._dolphinSceneImage);
-            // add the Go Forward button to the scene
-            this.goForwardButton = new objects.Button("GoforwardButton", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 140);
-            this.addChild(this.goForwardButton);
+            // add the button to the scene
+            this._playButton = new objects.Button("PlayButton", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 140);
+            this.addChild(this._playButton);
             // Go Forward Button event listener
-            this.goForwardButton.on("click", this.goForwardButtonClick, this);
-            // add the Enjoy button to the scene
-            this.enjoyButton = new objects.Button("EnjoyButton", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 140);
-            this.addChild(this.enjoyButton);
-            // Enjoy Button event listener
-            this.enjoyButton.on("click", this.enjoyButtonClick, this);
+            this._playButton.on("click", this._playButtonClick, this);
+            // add the button to the scene
+            this._goDeeperButton = new objects.Button("GoDeeperButton", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 140);
+            this.addChild(this._goDeeperButton);
+            // Button event listener
+            this._goDeeperButton.on("click", this._godeeperButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };
@@ -35,13 +35,13 @@ var scenes;
         };
         //EVENT HANDLERS ++++++++++++++++++++
         //  Button click event handler
-        DolphinScene.prototype.goForwardButtonClick = function (event) {
-            // Switch to the SHIPWRECK Scene
+        DolphinScene.prototype._playButtonClick = function (event) {
+            // Switch  the  Scene
             scene = config.Scene.SHIPWRECK_SCENE;
             changeScene();
         };
         // Button click event handler
-        DolphinScene.prototype.enjoyButtonClick = function (event) {
+        DolphinScene.prototype._godeeperButtonClick = function (event) {
             // Switch to the SEATURTLE Scene
             scene = config.Scene.SEATURTLE_SCENE;
             changeScene();

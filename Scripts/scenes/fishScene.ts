@@ -34,7 +34,7 @@ module scenes {
                 "GoOppositeButton",
                 config.Screen.CENTER_X+150,
                 config.Screen.CENTER_Y + 140);
-            this.addChild(this._followFishButton);
+            this.addChild(this._goOppositeButton);
            
             // GoOppositeButton Button event listener
             this._goOppositeButton.on("click", this._goOppositeButtonClick, this);
@@ -52,17 +52,17 @@ module scenes {
         
         //EVENT HANDLERS ++++++++++++++++++++
         
-        // START_OVER Button click event handler
+        //Button click event handler
         private _followFishButtonClick(event: createjs.MouseEvent) {
-            // Switch to the INTRO Scene
-            scene = config.Scene.INTRO;
+             // Switch  the Scene
+            scene = config.Scene.DOLPHIN_SCENE;
             changeScene();
         }
         
-        // START_OVER Button click event handler
+        //  Button click event handler
         private _goOppositeButtonClick(event: createjs.MouseEvent) {
-            // Switch to the INTRO Scene
-            scene = config.Scene.INTRO;
+            // Switch the  Scene
+            scene = config.Scene.ROCK_SCENE;
             changeScene();
         }
     }

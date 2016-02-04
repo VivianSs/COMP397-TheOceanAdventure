@@ -17,16 +17,16 @@ var scenes;
             // add Image
             this._seaTurtleSceneImage = new createjs.Bitmap("../../Assets/images/SeaTurtleScene.png");
             this.addChild(this._seaTurtleSceneImage);
-            // add the CORALLINE_SCENE button to the MENU scene
-            this._swimLeftButton = new objects.Button("SwimLeftButton", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 140);
-            this.addChild(this._swimLeftButton);
+            // add the CORALLINE_SCENE button to the scene
+            this._followTurtleButton = new objects.Button("FollowTurtleButton", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 140);
+            this.addChild(this._followTurtleButton);
             // CORALLINE_SCENE Button event listener
-            this._swimLeftButton.on("click", this._swimLeftButtonClick, this);
-            // add the CORALLINE_SCENE button to the MENU scene
-            this._swimRightButton = new objects.Button("SwimRightButton", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 140);
-            this.addChild(this._swimRightButton);
+            this._followTurtleButton.on("click", this._followTurtleButtonClick, this);
+            // add the CORALLINE_SCENE button to the scene
+            this._goOppositeButton = new objects.Button("GoOppositeButton", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 140);
+            this.addChild(this._goOppositeButton);
             // CORALLINE_SCENE Button event listener
-            this._swimRightButton.on("click", this._swimRightButtonClick, this);
+            this._goOppositeButton.on("click", this._goOppositeButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };
@@ -35,13 +35,13 @@ var scenes;
         };
         //EVENT HANDLERS ++++++++++++++++++++
         //  Button click event handler
-        SeaTurtleScene.prototype._swimLeftButtonClick = function (event) {
+        SeaTurtleScene.prototype._followTurtleButtonClick = function (event) {
             // Switch to the CORALLINE_SCENE Scene
             scene = config.Scene.CORALLINE_SCENE;
             changeScene();
         };
         // CORALLINE_SCENE Button click event handler
-        SeaTurtleScene.prototype._swimRightButtonClick = function (event) {
+        SeaTurtleScene.prototype._goOppositeButtonClick = function (event) {
             // Switch to the CORALLINE_SCENE Scene
             scene = config.Scene.FISH_SCENE;
             changeScene();

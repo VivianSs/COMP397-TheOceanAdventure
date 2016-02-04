@@ -25,7 +25,7 @@ var scenes;
             this._followFishButton.on("click", this._followFishButtonClick, this);
             // add the GoOppositeButton button to the scene
             this._goOppositeButton = new objects.Button("GoOppositeButton", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 140);
-            this.addChild(this._followFishButton);
+            this.addChild(this._goOppositeButton);
             // GoOppositeButton Button event listener
             this._goOppositeButton.on("click", this._goOppositeButtonClick, this);
             // add this scene to the global stage container
@@ -35,16 +35,16 @@ var scenes;
         FishScene.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
-        // START_OVER Button click event handler
+        //Button click event handler
         FishScene.prototype._followFishButtonClick = function (event) {
-            // Switch to the INTRO Scene
-            scene = config.Scene.INTRO;
+            // Switch  the Scene
+            scene = config.Scene.DOLPHIN_SCENE;
             changeScene();
         };
-        // START_OVER Button click event handler
+        //  Button click event handler
         FishScene.prototype._goOppositeButtonClick = function (event) {
-            // Switch to the INTRO Scene
-            scene = config.Scene.INTRO;
+            // Switch the  Scene
+            scene = config.Scene.ROCK_SCENE;
             changeScene();
         };
         return FishScene;
