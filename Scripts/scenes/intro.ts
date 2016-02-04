@@ -13,15 +13,15 @@ module scenes {
         
         // PUBLIC METHODS +++++++++++++++++++++
         
-        // Start Method
+        // Start MethodB
         public start(): void {
-            // add Intro Image
+            // add Intro Imageb
             this._introImage = new createjs.Bitmap("../../Assets/images/IntroCave.png");
             this.addChild(this._introImage);
             
             // add the LEFT_CAVE button to the MENU scene
             this._leftCaveButton = new objects.Button(
-                "LeftCaveButton",
+                "LeftButton",
                 config.Screen.CENTER_X - 100,
                 config.Screen.CENTER_Y + 180);
             this.addChild(this._leftCaveButton);
@@ -31,7 +31,7 @@ module scenes {
             
             // add the LEFT_CAVE button to the MENU scene
             this._rightCaveButton = new objects.Button(
-                "RightCaveButton",
+                "RightButton",
                 config.Screen.CENTER_X + 100,
                 config.Screen.CENTER_Y + 180);
             this.addChild(this._rightCaveButton);

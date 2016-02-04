@@ -13,18 +13,18 @@ var scenes;
             _super.call(this);
         }
         // PUBLIC METHODS +++++++++++++++++++++
-        // Start Method
+        // Start MethodB
         Intro.prototype.start = function () {
-            // add Intro Image
+            // add Intro Imageb
             this._introImage = new createjs.Bitmap("../../Assets/images/IntroCave.png");
             this.addChild(this._introImage);
             // add the LEFT_CAVE button to the MENU scene
-            this._leftCaveButton = new objects.Button("LeftCaveButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);
+            this._leftCaveButton = new objects.Button("LeftButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);
             this.addChild(this._leftCaveButton);
             // LEFT_CAVE Button event listener
             this._leftCaveButton.on("click", this._leftCaveButtonClick, this);
             // add the LEFT_CAVE button to the MENU scene
-            this._rightCaveButton = new objects.Button("RightCaveButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 180);
+            this._rightCaveButton = new objects.Button("RightButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 180);
             this.addChild(this._rightCaveButton);
             // LEFT_CAVE Button event listener
             this._rightCaveButton.on("click", this._rightCaveButtonClick, this);
