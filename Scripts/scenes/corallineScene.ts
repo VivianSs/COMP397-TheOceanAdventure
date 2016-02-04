@@ -1,9 +1,10 @@
-// LEFT_CAVE SCENE
+// CORALLINE_SCENE SCENE
 module scenes {
     export class CorallineScene extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _corallineSceneImage: createjs.Bitmap;
-        private _startOverButton: objects.Button;
+        private goForwardButton: objects.Button;
+        private enjoyButton: objects.Button;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -18,15 +19,25 @@ module scenes {
             this._corallineSceneImage = new createjs.Bitmap("../../Assets/images/CorallineScene.png");
             this.addChild(this._corallineSceneImage);
 
-            // add the BACK button to the OVER scene
-            this._startOverButton = new objects.Button(
-                "StartOverButton",
-                config.Screen.CENTER_X,
-                config.Screen.CENTER_Y + 180);
-            this.addChild(this._startOverButton);
+            // add the Go Forward button to the scene
+            this.goForwardButton = new objects.Button(
+                "GoforwardButton",
+                config.Screen.CENTER_X-150,
+                config.Screen.CENTER_Y + 140);
+            this.addChild(this.goForwardButton);
            
-            // START_OVER Button event listener
-            this._startOverButton.on("click", this._startOverButtonClick, this);
+            // Go Forward Button event listener
+            this.goForwardButton.on("click", this.goForwardButtonClick, this);
+            
+            // add the Enjoy button to the scene
+            this.enjoyButton = new objects.Button(
+                "EnjoyButton",
+                config.Screen.CENTER_X+150,
+                config.Screen.CENTER_Y + 140);
+            this.addChild(this.enjoyButton);
+           
+            // Enjoy Button event listener
+            this.enjoyButton.on("click", this.enjoyButtonClick, this);
 
 
             // add this scene to the global stage container
@@ -42,10 +53,18 @@ module scenes {
         //EVENT HANDLERS ++++++++++++++++++++
         
         // START_OVER Button click event handler
-        private _startOverButtonClick(event: createjs.MouseEvent) {
+        private goForwardButtonClick(event: createjs.MouseEvent) {
             // Switch to the INTRO Scene
             scene = config.Scene.INTRO;
             changeScene();
         }
+        
+        // START_OVER Button click event handler
+        private enjoyButtonClick(event: createjs.MouseEvent) {
+            // Switch to the INTRO Scene
+            scene = config.Scene.INTRO;
+            changeScene();
+        }
+        
     }
 }
