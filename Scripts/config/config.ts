@@ -3,8 +3,8 @@
     // Scene Constants
     export class Scene {
         public static INTRO: number = 0;
-        public static LEFT_CAVE: number = 1;
-        public static RIGHT_CAVE: number = 2;
+        public static CORALLINE_SCENE: number = 1;
+        public static FISH_SCENE: number = 2;
     }
     
     

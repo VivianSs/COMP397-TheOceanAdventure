@@ -6,6 +6,6 @@
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/scene.ts" />
 
-/// <reference path="../scenes/rightcave.ts" />
-/// <reference path="../scenes/leftcave.ts" />
+/// <reference path="../scenes/fishScene.ts" />
+/// <reference path="../scenes/corallineScene.ts" />
 /// <reference path="../scenes/intro.ts" />

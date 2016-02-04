@@ -3,8 +3,8 @@ module scenes {
     export class Intro extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _introImage: createjs.Bitmap;
-        private _leftCaveButton: objects.Button;
-        private _rightCaveButton: objects.Button;
+        private _swimLeftButton: objects.Button;
+        private _swimRightButton: objects.Button;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -19,25 +19,25 @@ module scenes {
             this._introImage = new createjs.Bitmap("../../Assets/images/IntroCave.png");
             this.addChild(this._introImage);
             
-            // add the LEFT_CAVE button to the MENU scene
-            this._leftCaveButton = new objects.Button(
-                "LeftButton",
-                config.Screen.CENTER_X - 100,
-                config.Screen.CENTER_Y + 180);
-            this.addChild(this._leftCaveButton);
+            // add the CORALLINE_SCENE button to the MENU scene
+            this._swimLeftButton = new objects.Button(
+                "SwimLeftButton",
+                config.Screen.CENTER_X - 150,
+                config.Screen.CENTER_Y + 140);
+            this.addChild(this._swimLeftButton);
             
-            // LEFT_CAVE Button event listener
-            this._leftCaveButton.on("click", this._leftCaveButtonClick, this);
+            // CORALLINE_SCENE Button event listener
+            this._swimLeftButton.on("click", this._swimLeftButtonClick, this);
             
-            // add the LEFT_CAVE button to the MENU scene
-            this._rightCaveButton = new objects.Button(
-                "RightButton",
-                config.Screen.CENTER_X + 100,
-                config.Screen.CENTER_Y + 180);
-            this.addChild(this._rightCaveButton);
+            // add the CORALLINE_SCENE button to the MENU scene
+            this._swimRightButton = new objects.Button(
+                "SwimRightButton",
+                config.Screen.CENTER_X + 150,
+                config.Screen.CENTER_Y + 140);
+            this.addChild(this._swimRightButton);
             
-            // LEFT_CAVE Button event listener
-            this._rightCaveButton.on("click", this._rightCaveButtonClick, this);
+            // CORALLINE_SCENE Button event listener
+            this._swimRightButton.on("click", this._swimRightButtonClick, this);
             
             // add this scene to the global stage container
             stage.addChild(this);
@@ -51,17 +51,17 @@ module scenes {
         
         //EVENT HANDLERS ++++++++++++++++++++
         
-        // LEFT_CAVE Button click event handler
-        private _leftCaveButtonClick(event: createjs.MouseEvent) {
-            // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.LEFT_CAVE;
+        // CORALLINE_SCENE Button click event handler
+        private _swimLeftButtonClick(event: createjs.MouseEvent) {
+            // Switch to the CORALLINE_SCENE Scene
+            scene = config.Scene.CORALLINE_SCENE;
             changeScene();
         }
         
-        // LEFT_CAVE Button click event handler
-        private _rightCaveButtonClick(event: createjs.MouseEvent) {
-            // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.RIGHT_CAVE;
+        // CORALLINE_SCENE Button click event handler
+        private _swimRightButtonClick(event: createjs.MouseEvent) {
+            // Switch to the CORALLINE_SCENE Scene
+            scene = config.Scene.FISH_SCENE;
             changeScene();
         }
     }

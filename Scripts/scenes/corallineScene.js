@@ -6,18 +6,18 @@ var __extends = (this && this.__extends) || function (d, b) {
 // LEFT_CAVE SCENE
 var scenes;
 (function (scenes) {
-    var LeftCave = (function (_super) {
-        __extends(LeftCave, _super);
+    var CorallineScene = (function (_super) {
+        __extends(CorallineScene, _super);
         // CONSTRUCTOR ++++++++++++++++++++++
-        function LeftCave() {
+        function CorallineScene() {
             _super.call(this);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
-        LeftCave.prototype.start = function () {
-            // add LeftCave Image
-            this._leftCaveImage = new createjs.Bitmap("../../Assets/images/LeftCave.png");
-            this.addChild(this._leftCaveImage);
+        CorallineScene.prototype.start = function () {
+            // add CorallineScene Image
+            this._corallineSceneImage = new createjs.Bitmap("../../Assets/images/CorallineScene.png");
+            this.addChild(this._corallineSceneImage);
             // add the BACK button to the OVER scene
             this._startOverButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
             this.addChild(this._startOverButton);
@@ -27,17 +27,17 @@ var scenes;
             stage.addChild(this);
         };
         // PLAY Scene updates here
-        LeftCave.prototype.update = function () {
+        CorallineScene.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
         // START_OVER Button click event handler
-        LeftCave.prototype._startOverButtonClick = function (event) {
+        CorallineScene.prototype._startOverButtonClick = function (event) {
             // Switch to the INTRO Scene
             scene = config.Scene.INTRO;
             changeScene();
         };
-        return LeftCave;
+        return CorallineScene;
     })(objects.Scene);
-    scenes.LeftCave = LeftCave;
+    scenes.CorallineScene = CorallineScene;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=leftcave.js.map
+//# sourceMappingURL=corallineScene.js.map

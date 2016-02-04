@@ -1,8 +1,8 @@
 // LEFT_CAVE SCENE
 module scenes {
-    export class RightCave extends objects.Scene {
+    export class CorallineScene extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
-        private _rightCaveImage: createjs.Bitmap;
+        private _corallineSceneImage: createjs.Bitmap;
         private _startOverButton: objects.Button;
         
         // CONSTRUCTOR ++++++++++++++++++++++
@@ -14,9 +14,9 @@ module scenes {
         
         // Start Method
         public start(): void {
-            // add LeftCave Image
-            this._rightCaveImage = new createjs.Bitmap("../../Assets/images/RightCave.png");
-            this.addChild(this._rightCaveImage);
+            // add CorallineScene Image
+            this._corallineSceneImage = new createjs.Bitmap("../../Assets/images/CorallineScene.png");
+            this.addChild(this._corallineSceneImage);
 
             // add the BACK button to the OVER scene
             this._startOverButton = new objects.Button(

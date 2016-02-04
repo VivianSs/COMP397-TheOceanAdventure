@@ -10,8 +10,8 @@ var scene: number;
 
 // Game Scenes
 var intro: scenes.Intro;
-var leftCave: scenes.LeftCave;
-var rightCave: scenes.RightCave;
+var corallineScene: scenes.CorallineScene;
+var fishScene: scenes.FishScene;
 
 function init(): void {
     // create a reference the HTML canvas Element
@@ -74,19 +74,19 @@ function changeScene(): void {
             currentScene = intro;
             console.log("Starting INTRO Scene");
             break;
-        case config.Scene.LEFT_CAVE:
-            // show the PLAY scene
+        case config.Scene.CORALLINE_SCENE:
+            // show the CORALLINE_SCENE scene
             stage.removeAllChildren();
-            leftCave = new scenes.LeftCave();
-            currentScene = leftCave;
-            console.log("Starting LEFT_CAVE Scene");
+            corallineScene = new scenes.CorallineScene();
+            currentScene = corallineScene;
+            console.log("Starting CORALLINE_SCENE Scene");
             break;
-        case config.Scene.RIGHT_CAVE:
-            // show the game OVER scene
+        case config.Scene.FISH_SCENE:
+            // show the FISH_SCENE scene
             stage.removeAllChildren();
-            rightCave = new scenes.RightCave();
-            currentScene = rightCave;
-            console.log("Starting RIGHT_CAVE Scene");
+            fishScene = new scenes.FishScene();
+            currentScene = fishScene;
+            console.log("Starting FISH_SCENE Scene");
             break;
     }
 
