@@ -52,17 +52,17 @@ module scenes {
         
         //EVENT HANDLERS ++++++++++++++++++++
         
-        // START_OVER Button click event handler
+        //  Button click event handler
         private goForwardButtonClick(event: createjs.MouseEvent) {
-            // Switch to the INTRO Scene
-            scene = config.Scene.INTRO;
+            // Switch to the SHIPWRECK Scene
+            scene = config.Scene.SHIPWRECK_SCENE;
             changeScene();
         }
         
-        // START_OVER Button click event handler
+        // Button click event handler
         private enjoyButtonClick(event: createjs.MouseEvent) {
-            // Switch to the INTRO Scene
-            scene = config.Scene.INTRO;
+            // Switch to the SEATURTLE Scene
+            scene = config.Scene.SEATURTLE_SCENE;
             changeScene();
         }
         

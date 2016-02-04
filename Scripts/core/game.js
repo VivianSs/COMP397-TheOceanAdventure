@@ -9,6 +9,8 @@ var scene;
 var intro;
 var corallineScene;
 var fishScene;
+var shipwreckScene;
+var seaTurtleScene;
 function init() {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
@@ -70,6 +72,20 @@ function changeScene() {
             fishScene = new scenes.FishScene();
             currentScene = fishScene;
             console.log("Starting FISH_SCENE Scene");
+            break;
+        case config.Scene.SHIPWRECK_SCENE:
+            // show the SHIPWRECK scene
+            stage.removeAllChildren();
+            shipwreckScene = new scenes.ShipwreckScene();
+            currentScene = shipwreckScene;
+            console.log("Starting SHIPWRECK_SCENE scene");
+            break;
+        case config.Scene.SEATURTLE_SCENE:
+            // show the SEATURTLE scene
+            stage.removeAllChildren();
+            seaTurtleScene = new scenes.SeaTurtleScene();
+            currentScene = seaTurtleScene;
+            console.log("Starting SEATURTLE_SCENE scene");
             break;
     }
     console.log(currentScene.numChildren);

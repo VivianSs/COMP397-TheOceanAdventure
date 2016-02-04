@@ -35,16 +35,16 @@ var scenes;
         CorallineScene.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
-        // START_OVER Button click event handler
+        //  Button click event handler
         CorallineScene.prototype.goForwardButtonClick = function (event) {
-            // Switch to the INTRO Scene
-            scene = config.Scene.INTRO;
+            // Switch to the SHIPWRECK Scene
+            scene = config.Scene.SHIPWRECK_SCENE;
             changeScene();
         };
-        // START_OVER Button click event handler
+        // Button click event handler
         CorallineScene.prototype.enjoyButtonClick = function (event) {
-            // Switch to the INTRO Scene
-            scene = config.Scene.INTRO;
+            // Switch to the SEATURTLE Scene
+            scene = config.Scene.SEATURTLE_SCENE;
             changeScene();
         };
         return CorallineScene;

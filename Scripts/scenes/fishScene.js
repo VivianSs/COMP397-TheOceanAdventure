@@ -15,14 +15,19 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         FishScene.prototype.start = function () {
-            // add LeftCave Image
+            // add FishScene Image
             this._fishSceneImage = new createjs.Bitmap("../../Assets/images/FishScene.png");
             this.addChild(this._fishSceneImage);
-            // add the BACK button to the OVER scene
-            this._startOverButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
-            this.addChild(this._startOverButton);
-            // START_OVER Button event listener
-            this._startOverButton.on("click", this._startOverButtonClick, this);
+            // add the FollowFishButton  to the scene
+            this._followFishButton = new objects.Button("FollowFishButton", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 140);
+            this.addChild(this._followFishButton);
+            // FollowFishButton  event listener
+            this._followFishButton.on("click", this._followFishButtonClick, this);
+            // add the GoOppositeButton button to the scene
+            this._goOppositeButton = new objects.Button("GoOppositeButton", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 140);
+            this.addChild(this._followFishButton);
+            // GoOppositeButton Button event listener
+            this._goOppositeButton.on("click", this._goOppositeButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };
@@ -31,7 +36,13 @@ var scenes;
         };
         //EVENT HANDLERS ++++++++++++++++++++
         // START_OVER Button click event handler
-        FishScene.prototype._startOverButtonClick = function (event) {
+        FishScene.prototype._followFishButtonClick = function (event) {
+            // Switch to the INTRO Scene
+            scene = config.Scene.INTRO;
+            changeScene();
+        };
+        // START_OVER Button click event handler
+        FishScene.prototype._goOppositeButtonClick = function (event) {
             // Switch to the INTRO Scene
             scene = config.Scene.INTRO;
             changeScene();

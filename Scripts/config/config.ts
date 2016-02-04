@@ -5,6 +5,10 @@
         public static INTRO: number = 0;
         public static CORALLINE_SCENE: number = 1;
         public static FISH_SCENE: number = 2;
+        public static SHIPWRECK_SCENE: number = 3;
+        public static SEATURTLE_SCENE: number = 4;
+        public static DOLPHIN_SCENE: number = 5;
+        public static ROCK_SCENE: number = 6;
     }
     
     

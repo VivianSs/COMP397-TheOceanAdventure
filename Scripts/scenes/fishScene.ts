@@ -3,7 +3,8 @@ module scenes {
     export class FishScene extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _fishSceneImage: createjs.Bitmap;
-        private _startOverButton: objects.Button;
+        private _followFishButton: objects.Button;
+        private _goOppositeButton: objects.Button;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -14,19 +15,29 @@ module scenes {
         
         // Start Method
         public start(): void {
-            // add LeftCave Image
+            // add FishScene Image
             this._fishSceneImage = new createjs.Bitmap("../../Assets/images/FishScene.png");
             this.addChild(this._fishSceneImage);
 
-            // add the BACK button to the OVER scene
-            this._startOverButton = new objects.Button(
-                "StartOverButton",
-                config.Screen.CENTER_X,
-                config.Screen.CENTER_Y + 180);
-            this.addChild(this._startOverButton);
+            // add the FollowFishButton  to the scene
+            this._followFishButton = new objects.Button(
+                "FollowFishButton",
+                config.Screen.CENTER_X-150,
+                config.Screen.CENTER_Y + 140);
+            this.addChild(this._followFishButton);
            
-            // START_OVER Button event listener
-            this._startOverButton.on("click", this._startOverButtonClick, this);
+            // FollowFishButton  event listener
+            this._followFishButton.on("click", this._followFishButtonClick, this);
+            
+            // add the GoOppositeButton button to the scene
+            this._goOppositeButton = new objects.Button(
+                "GoOppositeButton",
+                config.Screen.CENTER_X+150,
+                config.Screen.CENTER_Y + 140);
+            this.addChild(this._followFishButton);
+           
+            // GoOppositeButton Button event listener
+            this._goOppositeButton.on("click", this._goOppositeButtonClick, this);
 
 
             // add this scene to the global stage container
@@ -42,7 +53,14 @@ module scenes {
         //EVENT HANDLERS ++++++++++++++++++++
         
         // START_OVER Button click event handler
-        private _startOverButtonClick(event: createjs.MouseEvent) {
+        private _followFishButtonClick(event: createjs.MouseEvent) {
+            // Switch to the INTRO Scene
+            scene = config.Scene.INTRO;
+            changeScene();
+        }
+        
+        // START_OVER Button click event handler
+        private _goOppositeButtonClick(event: createjs.MouseEvent) {
             // Switch to the INTRO Scene
             scene = config.Scene.INTRO;
             changeScene();
