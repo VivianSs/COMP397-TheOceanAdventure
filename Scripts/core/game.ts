@@ -14,7 +14,8 @@ var corallineScene: scenes.CorallineScene;
 var fishScene: scenes.FishScene;
 var shipwreckScene: scenes.ShipwreckScene;
 var seaTurtleScene: scenes.SeaTurtleScene;
-
+var dolphinScene: scenes.DolphinScene;
+var rockScene: scenes.RockScene;
 
 function init(): void {
     // create a reference the HTML canvas Element
@@ -104,6 +105,20 @@ function changeScene(): void {
             seaTurtleScene = new scenes.SeaTurtleScene();
             currentScene = seaTurtleScene;
             console.log("Starting SEATURTLE_SCENE scene");
+            break;
+        case config.Scene.DOLPHIN_SCENE:
+            // show the DOLPHIN_SCENE
+            stage.removeAllChildren();
+            dolphinScene = new scenes.DolphinScene();
+            currentScene = dolphinScene;
+            console.log("Starting DOLPHIN_SCENE scene");
+            break;
+        case config.Scene.ROCK_SCENE:
+            // show the ROCK_SCENE
+            stage.removeAllChildren();
+            rockScene = new scenes.RockScene();
+            currentScene = rockScene;
+            console.log("Starting ROCK_SCENE scene");
             break;
 
 
