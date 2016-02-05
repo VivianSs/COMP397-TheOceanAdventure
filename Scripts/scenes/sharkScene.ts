@@ -1,7 +1,7 @@
 module scenes {
-    export class SnakeScene extends objects.Scene {
-          //PRIVATE INSTANCE VARIABLES ++++++++++++
-        private _snakeSceneImage: createjs.Bitmap;
+    export class SharkScene extends objects.Scene {
+           //PRIVATE INSTANCE VARIABLES ++++++++++++
+        private _sharkSceneImage: createjs.Bitmap;
         private _continueButton: objects.Button;
         private _startoverButton: objects.Button;
         private _gameLabel: objects.Label;
@@ -16,16 +16,11 @@ module scenes {
         // Start Method
         public start(): void {
             // add  Image
-            this._snakeSceneImage = new createjs.Bitmap("../../Assets/images/SnakeScene.png");
-            this.addChild(this._snakeSceneImage);
+            this._sharkSceneImage = new createjs.Bitmap("../../Assets/images/SharkScene.png");
+            this.addChild(this._sharkSceneImage);
             
             
-            this._gameLabel = new createjs.Text("", "36px Consolas", "#cc0000");
-            this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
-            this._gameLabel.regY = this._gameLabel.getMeasuredHeight() * 0.5;
-            this._gameLabel.x = config.Screen.CENTER_X;
-            this._gameLabel.y = config.Screen.CENTER_Y+80;
-            this.addChild(this._gameLabel);
+            
 
             // add the button to the scene
             this._continueButton = new objects.Button(
@@ -68,7 +63,7 @@ module scenes {
         
         // Button click event handler
         private _startoverButtonClick(event: createjs.MouseEvent) {
-            // Switch to the SEATURTLE Scene
+            // Switch to the Scene
             scene = config.Scene.INTRO;
             changeScene();
         }

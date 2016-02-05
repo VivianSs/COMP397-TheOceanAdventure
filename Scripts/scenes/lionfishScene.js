@@ -5,24 +5,18 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var scenes;
 (function (scenes) {
-    var SnakeScene = (function (_super) {
-        __extends(SnakeScene, _super);
+    var LionfishScene = (function (_super) {
+        __extends(LionfishScene, _super);
         // CONSTRUCTOR ++++++++++++++++++++++
-        function SnakeScene() {
+        function LionfishScene() {
             _super.call(this);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
-        SnakeScene.prototype.start = function () {
+        LionfishScene.prototype.start = function () {
             // add  Image
-            this._snakeSceneImage = new createjs.Bitmap("../../Assets/images/SnakeScene.png");
-            this.addChild(this._snakeSceneImage);
-            this._gameLabel = new createjs.Text("", "36px Consolas", "#cc0000");
-            this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
-            this._gameLabel.regY = this._gameLabel.getMeasuredHeight() * 0.5;
-            this._gameLabel.x = config.Screen.CENTER_X;
-            this._gameLabel.y = config.Screen.CENTER_Y + 80;
-            this.addChild(this._gameLabel);
+            this._lionfishSceneImage = new createjs.Bitmap("../../Assets/images/LionfishScene.png");
+            this.addChild(this._lionfishSceneImage);
             // add the button to the scene
             this._continueButton = new objects.Button("ContinueButton", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 140);
             this.addChild(this._continueButton);
@@ -37,21 +31,21 @@ var scenes;
             stage.addChild(this);
         };
         // PLAY Scene updates here
-        SnakeScene.prototype.update = function () {
+        LionfishScene.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
         //  Button click event handler
-        SnakeScene.prototype._continueButtonClick = function (event) {
+        LionfishScene.prototype._continueButtonClick = function (event) {
             this._gameLabel.text = "Game Over";
         };
         // Button click event handler
-        SnakeScene.prototype._startoverButtonClick = function (event) {
-            // Switch to the SEATURTLE Scene
+        LionfishScene.prototype._startoverButtonClick = function (event) {
+            // Switch to the Scene
             scene = config.Scene.INTRO;
             changeScene();
         };
-        return SnakeScene;
+        return LionfishScene;
     })(objects.Scene);
-    scenes.SnakeScene = SnakeScene;
+    scenes.LionfishScene = LionfishScene;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=snakeScene.js.map
+//# sourceMappingURL=lionfishScene.js.map

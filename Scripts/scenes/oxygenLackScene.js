@@ -5,24 +5,18 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var scenes;
 (function (scenes) {
-    var SnakeScene = (function (_super) {
-        __extends(SnakeScene, _super);
+    var OxygenLackScene = (function (_super) {
+        __extends(OxygenLackScene, _super);
         // CONSTRUCTOR ++++++++++++++++++++++
-        function SnakeScene() {
+        function OxygenLackScene() {
             _super.call(this);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
-        SnakeScene.prototype.start = function () {
+        OxygenLackScene.prototype.start = function () {
             // add  Image
-            this._snakeSceneImage = new createjs.Bitmap("../../Assets/images/SnakeScene.png");
-            this.addChild(this._snakeSceneImage);
-            this._gameLabel = new createjs.Text("", "36px Consolas", "#cc0000");
-            this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
-            this._gameLabel.regY = this._gameLabel.getMeasuredHeight() * 0.5;
-            this._gameLabel.x = config.Screen.CENTER_X;
-            this._gameLabel.y = config.Screen.CENTER_Y + 80;
-            this.addChild(this._gameLabel);
+            this._oxygenLackSceneImage = new createjs.Bitmap("../../Assets/images/OxygenLackScene.png");
+            this.addChild(this._oxygenLackSceneImage);
             // add the button to the scene
             this._continueButton = new objects.Button("ContinueButton", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 140);
             this.addChild(this._continueButton);
@@ -37,21 +31,21 @@ var scenes;
             stage.addChild(this);
         };
         // PLAY Scene updates here
-        SnakeScene.prototype.update = function () {
+        OxygenLackScene.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
         //  Button click event handler
-        SnakeScene.prototype._continueButtonClick = function (event) {
+        OxygenLackScene.prototype._continueButtonClick = function (event) {
             this._gameLabel.text = "Game Over";
         };
         // Button click event handler
-        SnakeScene.prototype._startoverButtonClick = function (event) {
-            // Switch to the SEATURTLE Scene
+        OxygenLackScene.prototype._startoverButtonClick = function (event) {
+            // Switch to the Scene
             scene = config.Scene.INTRO;
             changeScene();
         };
-        return SnakeScene;
+        return OxygenLackScene;
     })(objects.Scene);
-    scenes.SnakeScene = SnakeScene;
+    scenes.OxygenLackScene = OxygenLackScene;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=snakeScene.js.map
+//# sourceMappingURL=oxygenLackScene.js.map

@@ -16,6 +16,14 @@ var shipwreckScene: scenes.ShipwreckScene;
 var seaTurtleScene: scenes.SeaTurtleScene;
 var dolphinScene: scenes.DolphinScene;
 var rockScene: scenes.RockScene;
+var snakeScene: scenes.SnakeScene;
+var treasureScene: scenes.TreasureScene;
+var sharkScene: scenes.SharkScene;
+var oxygenLackScene: scenes.OxygenLackScene;
+var jellyfishScene: scenes.JellyfishScene;
+var waterPressureScene: scenes.WaterPressureScene;
+var crocodileScene: scenes.CrocodileScene;
+var lionfishScene: scenes.LionfishScene;
 
 function init(): void {
     // create a reference the HTML canvas Element
@@ -119,6 +127,62 @@ function changeScene(): void {
             rockScene = new scenes.RockScene();
             currentScene = rockScene;
             console.log("Starting ROCK_SCENE scene");
+            break;
+        case config.Scene.SNAKE_SCENE:
+            // show the SNAKE_SCENE
+            stage.removeAllChildren();
+            snakeScene = new scenes.SnakeScene();
+            currentScene = snakeScene;
+            console.log("Starting SNAKE_SCENE scene");
+            break;
+        case config.Scene.TREASURE_SCENE:
+            // show the TREASURE_SCENE
+            stage.removeAllChildren();
+            treasureScene = new scenes.TreasureScene();
+            currentScene = treasureScene;
+            console.log("Starting TREASURE_SCENE scene");
+            break;
+        case config.Scene.SHARK_SCENE:
+            // show the SHARK_SCENE
+            stage.removeAllChildren();
+            sharkScene = new scenes.SharkScene();
+            currentScene = sharkScene;
+            console.log("Starting SHARK_SCENE scene");
+            break;
+        case config.Scene.OXYGENLACK_SCENE:
+            // show the OXYGENLACK_SCENE
+            stage.removeAllChildren();
+            oxygenLackScene = new scenes.OxygenLackScene();
+            currentScene = oxygenLackScene;
+            console.log("Starting OXYGENLACK_SCENE scene");
+            break;
+        case config.Scene.JELLYFISH_SCENE:
+            // show the JELLYFISH_SCENE
+            stage.removeAllChildren();
+            jellyfishScene = new scenes.JellyfishScene();
+            currentScene = jellyfishScene;
+            console.log("Starting JELLYFISH_SCENE scene");
+            break;
+        case config.Scene.WATERPRESSURE_SCENE:
+            // show the WATERPRESSURE_SCENE
+            stage.removeAllChildren();
+            waterPressureScene = new scenes.WaterPressureScene();
+            currentScene = waterPressureScene;
+            console.log("Starting WATERPRESSURE_SCENE scene");
+            break;
+        case config.Scene.CROCODILE_SCENE:
+            // show the CROCODILE_SCENE
+            stage.removeAllChildren();
+            crocodileScene = new scenes.CrocodileScene();
+            currentScene = crocodileScene;
+            console.log("Starting CROCODILE_SCENE scene");
+            break;
+        case config.Scene.LIONFISH_SCENE:
+            // show the LIONFISH_SCENE
+            stage.removeAllChildren();
+            lionfishScene = new scenes.LionfishScene();
+            currentScene = lionfishScene;
+            console.log("Starting LIONFISH_SCENE scene");
             break;
 
 
