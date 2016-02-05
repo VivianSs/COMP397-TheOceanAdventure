@@ -52,16 +52,16 @@ module scenes {
         
         //EVENT HANDLERS ++++++++++++++++++++
         
-        //Button click event handler
+        //follow fish Button click event handler
         private _followFishButtonClick(event: createjs.MouseEvent) {
-             // Switch  the Scene
+             // Switch  to the DOLPHIN_SCENEe
             scene = config.Scene.DOLPHIN_SCENE;
             changeScene();
         }
         
-        //  Button click event handler
+        //  go opposite Button click event handler
         private _goOppositeButtonClick(event: createjs.MouseEvent) {
-            // Switch the  Scene
+            // Switch to the ROCK_SCENE
             scene = config.Scene.ROCK_SCENE;
             changeScene();
         }

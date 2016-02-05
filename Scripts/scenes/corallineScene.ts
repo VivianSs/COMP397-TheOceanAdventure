@@ -52,14 +52,14 @@ module scenes {
         
         //EVENT HANDLERS ++++++++++++++++++++
         
-        //  Button click event handler
+        // Go Forward Button click event handler
         private goForwardButtonClick(event: createjs.MouseEvent) {
             // Switch to the SHIPWRECK Scene
             scene = config.Scene.SHIPWRECK_SCENE;
             changeScene();
         }
         
-        // Button click event handler
+        //Enjoy Button click event handler
         private enjoyButtonClick(event: createjs.MouseEvent) {
             // Switch to the SEATURTLE Scene
             scene = config.Scene.SEATURTLE_SCENE;

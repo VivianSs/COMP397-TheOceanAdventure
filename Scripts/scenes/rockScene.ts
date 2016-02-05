@@ -14,28 +14,28 @@ module scenes {
         
         // Start Method
         public start(): void {
-            // add  Image
+            // add  rockScene Image
             this._rockSceneImage = new createjs.Bitmap("../../Assets/images/RockScene.png");
             this.addChild(this._rockSceneImage);
 
-            // add the button to the scene
+            // add the detour button to the scene
             this._detourButton = new objects.Button(
                 "DetourButton",
                 config.Screen.CENTER_X-150,
                 config.Screen.CENTER_Y + 140);
             this.addChild(this._detourButton);
            
-            // Button event listener
+            // detour Button event listener
             this._detourButton.on("click", this._detourButtonClick, this);
             
-            // add button to the scene
+            // add goThrough button to the scene
             this._goThroughButton = new objects.Button(
                 "GoThroughButton",
                 config.Screen.CENTER_X+150,
                 config.Screen.CENTER_Y + 140);
             this.addChild(this._goThroughButton);
            
-            //  Button event listener
+            //  goThrough Button event listener
             this._goThroughButton.on("click", this._goThroughButtonClick, this);
 
 
@@ -51,14 +51,14 @@ module scenes {
         
         //EVENT HANDLERS ++++++++++++++++++++
         
-        //  Button click event handler
+        //  detour Button click event handler
         private _detourButtonClick(event: createjs.MouseEvent) {
            
             scene = config.Scene.CROCODILE_SCENE;
             changeScene();
         }
         
-        // Button click event handler
+        // goThrough Button click event handler
         private _goThroughButtonClick(event: createjs.MouseEvent) {
             
             scene = config.Scene.LIONFISH_SCENE;

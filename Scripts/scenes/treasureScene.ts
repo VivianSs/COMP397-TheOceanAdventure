@@ -15,37 +15,37 @@ module scenes {
         
         // Start Method
         public start(): void {
-            // add  Image
+            // add  treasureScene Image
             this._treasureSceneImage = new createjs.Bitmap("../../Assets/images/TreasureScene.png");
             this.addChild(this._treasureSceneImage);
             
             this._gameLabel = new createjs.Text("", "36px Consolas", "#cc0000");
             this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
             this._gameLabel.regY = this._gameLabel.getMeasuredHeight() * 0.5;
-            this._gameLabel.x = config.Screen.CENTER_X-75;
+            this._gameLabel.x = config.Screen.CENTER_X-90;
             this._gameLabel.y = config.Screen.CENTER_Y+80;
             this.addChild(this._gameLabel);
             
             
 
-            // add the button to the scene
+            // add the continue button to the scene
             this._continueButton = new objects.Button(
                 "ContinueButton",
                 config.Screen.CENTER_X-150,
                 config.Screen.CENTER_Y + 180);
             this.addChild(this._continueButton);
            
-            // Button event listener
+            // continue Button event listener
             this._continueButton.on("click", this._continueButtonClick, this);
             
-            // add button to the scene
+            // add startover button to the scene
             this._startoverButton = new objects.Button(
                 "StartOverButton",
                 config.Screen.CENTER_X+150,
                 config.Screen.CENTER_Y + 180);
             this.addChild(this._startoverButton);
            
-            //  Button event listener
+            //  startover Button event listener
             this._startoverButton.on("click", this._startoverButtonClick, this);
 
 
@@ -61,7 +61,7 @@ module scenes {
         
         //EVENT HANDLERS ++++++++++++++++++++
         
-        //  Button click event handler
+        //  continue Button click event handler
         private _continueButtonClick(event: createjs.MouseEvent) {
             
            this._gameLabel.text = "You Win";
@@ -69,7 +69,7 @@ module scenes {
         
         // Button click event handler
         private _startoverButtonClick(event: createjs.MouseEvent) {
-            // Switch to the Scene
+            // Switch to the INTRO Scene
             scene = config.Scene.INTRO;
             changeScene();
         }

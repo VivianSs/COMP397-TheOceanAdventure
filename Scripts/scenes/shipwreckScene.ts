@@ -14,7 +14,7 @@ module scenes {
         
         // Start Method
         public start(): void {
-            // add Image
+            // add shipwreckScene Image
             this._shipwreckSceneImage = new createjs.Bitmap("../../Assets/images/ShipwreckScene.png");
             this.addChild(this._shipwreckSceneImage);
             
@@ -25,7 +25,7 @@ module scenes {
                 config.Screen.CENTER_Y + 140);
             this.addChild(this._goAwayButton);
             
-            // CORALLINE_SCENE Button event listener
+            //Go Away Button event listener
             this._goAwayButton.on("click", this._goAwayButtonClick, this);
             
             // add the Enter Hatch button to the scene
@@ -35,7 +35,7 @@ module scenes {
                 config.Screen.CENTER_Y + 140);
             this.addChild(this._enterHatchButton);
             
-            // CORALLINE_SCENE Button event listener
+            // Enter Hatch Button event listener
             this._enterHatchButton.on("click", this._enterHatchButtonClick, this);
             
             // add this scene to the global stage container
@@ -52,14 +52,14 @@ module scenes {
         
         //  Button click event handler
         private _goAwayButtonClick(event: createjs.MouseEvent) {
-            // Switch to the  Scene
+            // Switch to the SNAKE_SCENE
             scene = config.Scene.SNAKE_SCENE;
             changeScene();
         }
         
         // Button click event handler
         private _enterHatchButtonClick(event: createjs.MouseEvent) {
-            // Switch to the Scene
+            // Switch to the TREASURE_SCENE
             scene = config.Scene.TREASURE_SCENE;
             changeScene();
         }

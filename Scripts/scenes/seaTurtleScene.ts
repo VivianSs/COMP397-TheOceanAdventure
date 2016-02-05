@@ -14,35 +14,35 @@ module scenes {
         
         // Start Method
         public start(): void {
-            // add Image
+            // add seaTurtleScene Image
             this._seaTurtleSceneImage = new createjs.Bitmap("../../Assets/images/SeaTurtleScene.png");
             this.addChild(this._seaTurtleSceneImage);
             
-            // add the CORALLINE_SCENE button to the scene
+            // add the followTurtle button to the scene
             this._followTurtleButton = new objects.Button(
                 "FollowTurtleButton",
                 config.Screen.CENTER_X - 150,
                 config.Screen.CENTER_Y + 140);
             this.addChild(this._followTurtleButton);
             
-            // CORALLINE_SCENE Button event listener
+            // followTurtle Button event listener
             this._followTurtleButton.on("click", this._followTurtleButtonClick, this);
             
-            // add the CORALLINE_SCENE button to the scene
+            // add the goOpposite button to the scene
             this._goOppositeButton = new objects.Button(
                 "GoOppositeButton",
                 config.Screen.CENTER_X + 150,
                 config.Screen.CENTER_Y + 140);
             this.addChild(this._goOppositeButton);
             
-            // CORALLINE_SCENE Button event listener
+            // goOpposite Button event listener
             this._goOppositeButton.on("click", this._goOppositeButtonClick, this);
             
             // add this scene to the global stage container
             stage.addChild(this);
         }
 
-        // INTRO Scene updates here
+        //  Scene updates here
         public update(): void {
 
         }
@@ -50,14 +50,14 @@ module scenes {
         
         //EVENT HANDLERS ++++++++++++++++++++
         
-        //  Button click event handler
+        // followTurtle Button click event handler
         private _followTurtleButtonClick(event: createjs.MouseEvent) {
           
             scene = config.Scene.SHARK_SCENE;
             changeScene();
         }
         
-        //  Button click event handler
+        //  goOpposite Button click event handler
         private _goOppositeButtonClick(event: createjs.MouseEvent) {
             
             scene = config.Scene.OXYGENLACK_SCENE;

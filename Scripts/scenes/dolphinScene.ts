@@ -15,28 +15,28 @@ module scenes {
         
         // Start Method
         public start(): void {
-            // add  Image
+            // add  dolphinScene Image
             this._dolphinSceneImage = new createjs.Bitmap("../../Assets/images/DolphinScene.png");
             this.addChild(this._dolphinSceneImage);
 
-            // add the button to the scene
+            // add the play button to the scene
             this._playButton = new objects.Button(
                 "PlayButton",
                 config.Screen.CENTER_X-150,
                 config.Screen.CENTER_Y + 140);
             this.addChild(this._playButton);
            
-            // Go Forward Button event listener
+            // play Button event listener
             this._playButton.on("click", this._playButtonClick, this);
             
-            // add the button to the scene
+            // add the go deeper button to the scene
             this._goDeeperButton = new objects.Button(
                 "GoDeeperButton",
                 config.Screen.CENTER_X+150,
                 config.Screen.CENTER_Y + 140);
             this.addChild(this._goDeeperButton);
            
-            // Button event listener
+            // go deeper Button event listener
             this._goDeeperButton.on("click", this._godeeperButtonClick, this);
 
 
@@ -52,16 +52,16 @@ module scenes {
         
         //EVENT HANDLERS ++++++++++++++++++++
         
-        //  Button click event handler
+        //  play Button click event handler
         private _playButtonClick(event: createjs.MouseEvent) {
-            // Switch  the  Scene
+            // Switch  the  JELLYFISH_SCENE
             scene = config.Scene.JELLYFISH_SCENE;
             changeScene();
         }
         
-        // Button click event handler
+        // go deeper Button click event handler
         private _godeeperButtonClick(event: createjs.MouseEvent) {
-            // Switch to the Scene
+            // Switch to the WATERPRESSURE_SCENE
             scene = config.Scene.WATERPRESSURE_SCENE;
             changeScene();
         }
