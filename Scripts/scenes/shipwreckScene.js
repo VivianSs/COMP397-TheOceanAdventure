@@ -36,8 +36,8 @@ var scenes;
         //EVENT HANDLERS ++++++++++++++++++++
         //  Button click event handler
         ShipwreckScene.prototype._goAwayButtonClick = function (event) {
-            // Switch to the CORALLINE_SCENE Scene
-            scene = config.Scene.CORALLINE_SCENE;
+            // Switch to the  Scene
+            scene = config.Scene.SNAKE_SCENE;
             changeScene();
         };
         // CORALLINE_SCENE Button click event handler

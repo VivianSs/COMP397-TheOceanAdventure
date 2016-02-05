@@ -52,8 +52,8 @@ module scenes {
         
         //  Button click event handler
         private _goAwayButtonClick(event: createjs.MouseEvent) {
-            // Switch to the CORALLINE_SCENE Scene
-            scene = config.Scene.CORALLINE_SCENE;
+            // Switch to the  Scene
+            scene = config.Scene.SNAKE_SCENE;
             changeScene();
         }
         

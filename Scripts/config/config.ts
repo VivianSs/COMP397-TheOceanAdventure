@@ -9,6 +9,14 @@
         public static SEATURTLE_SCENE: number = 4;
         public static DOLPHIN_SCENE: number = 5;
         public static ROCK_SCENE: number = 6;
+        public static SNAKE_SCENE: number = 7;
+        public static TREASURE_SCENE: number = 8;
+        public static SHARK_SCENE: number = 9;
+        public static OXYGENLACK_SCENE: number = 10;
+        public static JELLYFISH_SCENE: number = 11;
+        public static WATERPRESSURE_SCENE: number = 12;
+        public static CROCODILE_SCENE: number = 13;
+        public static LIONFISH_SCENE: number = 14;
     }
     
     
