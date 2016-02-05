@@ -19,14 +19,19 @@ module scenes {
             this._lionfishSceneImage = new createjs.Bitmap("../../Assets/images/LionfishScene.png");
             this.addChild(this._lionfishSceneImage);
             
-            
+            this._gameLabel = new createjs.Text("", "36px Consolas", "#cc0000");
+            this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
+            this._gameLabel.regY = this._gameLabel.getMeasuredHeight() * 0.5;
+            this._gameLabel.x = config.Screen.CENTER_X-75;
+            this._gameLabel.y = config.Screen.CENTER_Y+80;
+            this.addChild(this._gameLabel);
             
 
             // add the button to the scene
             this._continueButton = new objects.Button(
                 "ContinueButton",
                 config.Screen.CENTER_X-150,
-                config.Screen.CENTER_Y + 140);
+                config.Screen.CENTER_Y + 180);
             this.addChild(this._continueButton);
            
             // Button event listener
@@ -36,7 +41,7 @@ module scenes {
             this._startoverButton = new objects.Button(
                 "StartOverButton",
                 config.Screen.CENTER_X+150,
-                config.Screen.CENTER_Y + 140);
+                config.Screen.CENTER_Y + 180);
             this.addChild(this._startoverButton);
            
             //  Button event listener
