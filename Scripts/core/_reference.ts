@@ -12,4 +12,5 @@
 /// <reference path="../scenes/rockScene.ts" />
 /// <reference path="../scenes/corallineScene.ts" />
 /// <reference path="../scenes/shipwreckScene.ts" />
+/// <reference path="../scenes/snakeScene.ts" />
 /// <reference path="../scenes/seaTurtleScene.ts" />
