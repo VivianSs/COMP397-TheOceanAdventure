@@ -57,10 +57,10 @@ module scenes {
             changeScene();
         }
         
-        // CORALLINE_SCENE Button click event handler
+        // Button click event handler
         private _enterHatchButtonClick(event: createjs.MouseEvent) {
-            // Switch to the CORALLINE_SCENE Scene
-            scene = config.Scene.FISH_SCENE;
+            // Switch to the Scene
+            scene = config.Scene.TREASURE_SCENE;
             changeScene();
         }
     }

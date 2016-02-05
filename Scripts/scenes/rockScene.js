@@ -36,14 +36,12 @@ var scenes;
         //EVENT HANDLERS ++++++++++++++++++++
         //  Button click event handler
         RockScene.prototype._detourButtonClick = function (event) {
-            // Switch to the SHIPWRECK Scene
-            scene = config.Scene.SHIPWRECK_SCENE;
+            scene = config.Scene.CROCODILE_SCENE;
             changeScene();
         };
         // Button click event handler
         RockScene.prototype._goThroughButtonClick = function (event) {
-            // Switch to the SEATURTLE Scene
-            scene = config.Scene.SEATURTLE_SCENE;
+            scene = config.Scene.LIONFISH_SCENE;
             changeScene();
         };
         return RockScene;

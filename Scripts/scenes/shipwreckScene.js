@@ -40,10 +40,10 @@ var scenes;
             scene = config.Scene.SNAKE_SCENE;
             changeScene();
         };
-        // CORALLINE_SCENE Button click event handler
+        // Button click event handler
         ShipwreckScene.prototype._enterHatchButtonClick = function (event) {
-            // Switch to the CORALLINE_SCENE Scene
-            scene = config.Scene.FISH_SCENE;
+            // Switch to the Scene
+            scene = config.Scene.TREASURE_SCENE;
             changeScene();
         };
         return ShipwreckScene;

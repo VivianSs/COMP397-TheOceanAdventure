@@ -37,13 +37,13 @@ var scenes;
         //  Button click event handler
         DolphinScene.prototype._playButtonClick = function (event) {
             // Switch  the  Scene
-            scene = config.Scene.SHIPWRECK_SCENE;
+            scene = config.Scene.JELLYFISH_SCENE;
             changeScene();
         };
         // Button click event handler
         DolphinScene.prototype._godeeperButtonClick = function (event) {
-            // Switch to the SEATURTLE Scene
-            scene = config.Scene.SEATURTLE_SCENE;
+            // Switch to the Scene
+            scene = config.Scene.WATERPRESSURE_SCENE;
             changeScene();
         };
         return DolphinScene;

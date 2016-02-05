@@ -53,15 +53,15 @@ module scenes {
         
         //  Button click event handler
         private _detourButtonClick(event: createjs.MouseEvent) {
-            // Switch to the SHIPWRECK Scene
-            scene = config.Scene.SHIPWRECK_SCENE;
+           
+            scene = config.Scene.CROCODILE_SCENE;
             changeScene();
         }
         
         // Button click event handler
         private _goThroughButtonClick(event: createjs.MouseEvent) {
-            // Switch to the SEATURTLE Scene
-            scene = config.Scene.SEATURTLE_SCENE;
+            
+            scene = config.Scene.LIONFISH_SCENE;
             changeScene();
         }
     }

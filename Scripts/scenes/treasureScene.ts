@@ -19,6 +19,12 @@ module scenes {
             this._treasureSceneImage = new createjs.Bitmap("../../Assets/images/TreasureScene.png");
             this.addChild(this._treasureSceneImage);
             
+            this._gameLabel = new createjs.Text("", "36px Consolas", "#cc0000");
+            this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
+            this._gameLabel.regY = this._gameLabel.getMeasuredHeight() * 0.5;
+            this._gameLabel.x = config.Screen.CENTER_X-50;
+            this._gameLabel.y = config.Screen.CENTER_Y+80;
+            this.addChild(this._gameLabel);
             
             
 
@@ -58,7 +64,7 @@ module scenes {
         //  Button click event handler
         private _continueButtonClick(event: createjs.MouseEvent) {
             
-           this._gameLabel.text = "Game Over";
+           this._gameLabel.text = "You Win";
         }
         
         // Button click event handler

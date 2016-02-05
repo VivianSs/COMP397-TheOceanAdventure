@@ -55,14 +55,14 @@ module scenes {
         //  Button click event handler
         private _playButtonClick(event: createjs.MouseEvent) {
             // Switch  the  Scene
-            scene = config.Scene.SHIPWRECK_SCENE;
+            scene = config.Scene.JELLYFISH_SCENE;
             changeScene();
         }
         
         // Button click event handler
         private _godeeperButtonClick(event: createjs.MouseEvent) {
-            // Switch to the SEATURTLE Scene
-            scene = config.Scene.SEATURTLE_SCENE;
+            // Switch to the Scene
+            scene = config.Scene.WATERPRESSURE_SCENE;
             changeScene();
         }
     }

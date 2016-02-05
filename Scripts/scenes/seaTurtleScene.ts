@@ -52,15 +52,15 @@ module scenes {
         
         //  Button click event handler
         private _followTurtleButtonClick(event: createjs.MouseEvent) {
-            // Switch to the CORALLINE_SCENE Scene
-            scene = config.Scene.CORALLINE_SCENE;
+          
+            scene = config.Scene.SHARK_SCENE;
             changeScene();
         }
         
-        // CORALLINE_SCENE Button click event handler
+        //  Button click event handler
         private _goOppositeButtonClick(event: createjs.MouseEvent) {
-            // Switch to the CORALLINE_SCENE Scene
-            scene = config.Scene.FISH_SCENE;
+            
+            scene = config.Scene.OXYGENLACK_SCENE;
             changeScene();
         }
     }
