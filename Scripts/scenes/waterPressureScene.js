@@ -14,13 +14,13 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         WaterPressureScene.prototype.start = function () {
-            // add  Image
+            // add  waterPressureScene Image
             this._waterPressureSceneImage = new createjs.Bitmap("../../Assets/images/WaterPressureScene.png");
             this.addChild(this._waterPressureSceneImage);
             this._gameLabel = new createjs.Text("", "36px Consolas", "#cc0000");
             this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
             this._gameLabel.regY = this._gameLabel.getMeasuredHeight() * 0.5;
-            this._gameLabel.x = config.Screen.CENTER_X - 75;
+            this._gameLabel.x = config.Screen.CENTER_X - 90;
             this._gameLabel.y = config.Screen.CENTER_Y + 80;
             this.addChild(this._gameLabel);
             // add the button to the scene

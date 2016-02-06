@@ -14,24 +14,24 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         SharkScene.prototype.start = function () {
-            // add  Image
+            // add  sharkSceneImage
             this._sharkSceneImage = new createjs.Bitmap("../../Assets/images/SharkScene.png");
             this.addChild(this._sharkSceneImage);
             this._gameLabel = new createjs.Text("", "36px Consolas", "#cc0000");
             this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
             this._gameLabel.regY = this._gameLabel.getMeasuredHeight() * 0.5;
-            this._gameLabel.x = config.Screen.CENTER_X - 75;
+            this._gameLabel.x = config.Screen.CENTER_X - 90;
             this._gameLabel.y = config.Screen.CENTER_Y + 80;
             this.addChild(this._gameLabel);
-            // add the button to the scene
+            // add the continue button to the scene
             this._continueButton = new objects.Button("ContinueButton", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 180);
             this.addChild(this._continueButton);
-            // Button event listener
+            // continue Button event listener
             this._continueButton.on("click", this._continueButtonClick, this);
-            // add button to the scene
+            // add startover button to the scene
             this._startoverButton = new objects.Button("StartOverButton", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 180);
             this.addChild(this._startoverButton);
-            //  Button event listener
+            //  startover Button event listener
             this._startoverButton.on("click", this._startoverButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
@@ -40,13 +40,13 @@ var scenes;
         SharkScene.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
-        //  Button click event handler
+        //  continue Button click event handler
         SharkScene.prototype._continueButtonClick = function (event) {
             this._gameLabel.text = "Game Over";
         };
-        // Button click event handler
+        // startover Button click event handler
         SharkScene.prototype._startoverButtonClick = function (event) {
-            // Switch to the Scene
+            // Switch to the INTRO Scene
             scene = config.Scene.INTRO;
             changeScene();
         };

@@ -25,6 +25,7 @@ var waterPressureScene: scenes.WaterPressureScene;
 var crocodileScene: scenes.CrocodileScene;
 var lionfishScene: scenes.LionfishScene;
 
+
 function init(): void {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");

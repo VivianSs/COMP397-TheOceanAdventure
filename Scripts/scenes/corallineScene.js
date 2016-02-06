@@ -35,13 +35,13 @@ var scenes;
         CorallineScene.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
-        //  Button click event handler
+        // Go Forward Button click event handler
         CorallineScene.prototype.goForwardButtonClick = function (event) {
             // Switch to the SHIPWRECK Scene
             scene = config.Scene.SHIPWRECK_SCENE;
             changeScene();
         };
-        // Button click event handler
+        //Enjoy Button click event handler
         CorallineScene.prototype.enjoyButtonClick = function (event) {
             // Switch to the SEATURTLE Scene
             scene = config.Scene.SEATURTLE_SCENE;

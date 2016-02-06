@@ -18,15 +18,15 @@ var scenes;
             // add Intro Imageb
             this._introImage = new createjs.Bitmap("../../Assets/images/IntroCave.png");
             this.addChild(this._introImage);
-            // add the CORALLINE_SCENE button to the MENU scene
+            // add the swim left button 
             this._swimLeftButton = new objects.Button("SwimLeftButton", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 140);
             this.addChild(this._swimLeftButton);
-            // CORALLINE_SCENE Button event listener
+            // swim left Button event listener
             this._swimLeftButton.on("click", this._swimLeftButtonClick, this);
-            // add the CORALLINE_SCENE button to the MENU scene
+            // add the swim right button 
             this._swimRightButton = new objects.Button("SwimRightButton", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 140);
             this.addChild(this._swimRightButton);
-            // CORALLINE_SCENE Button event listener
+            // swim right Button event listener
             this._swimRightButton.on("click", this._swimRightButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
@@ -35,15 +35,15 @@ var scenes;
         Intro.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
-        // CORALLINE_SCENE Button click event handler
+        // swim left Button click event handler
         Intro.prototype._swimLeftButtonClick = function (event) {
             // Switch to the CORALLINE_SCENE Scene
             scene = config.Scene.CORALLINE_SCENE;
             changeScene();
         };
-        // CORALLINE_SCENE Button click event handler
+        // swim right Button click event handler
         Intro.prototype._swimRightButtonClick = function (event) {
-            // Switch to the CORALLINE_SCENE Scene
+            // Switch to the FISH_SCENE
             scene = config.Scene.FISH_SCENE;
             changeScene();
         };

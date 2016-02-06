@@ -35,15 +35,15 @@ var scenes;
         FishScene.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
-        //Button click event handler
+        //follow fish Button click event handler
         FishScene.prototype._followFishButtonClick = function (event) {
-            // Switch  the Scene
+            // Switch  to the DOLPHIN_SCENEe
             scene = config.Scene.DOLPHIN_SCENE;
             changeScene();
         };
-        //  Button click event handler
+        //  go opposite Button click event handler
         FishScene.prototype._goOppositeButtonClick = function (event) {
-            // Switch the  Scene
+            // Switch to the ROCK_SCENE
             scene = config.Scene.ROCK_SCENE;
             changeScene();
         };
